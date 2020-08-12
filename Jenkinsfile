@@ -20,8 +20,11 @@ spec:
       checkout scm
       container('nodejs') {
         sh 'npm install -g grunt-cli bower'
-		sh 'grunt --help'
         sh 'npm install'
+        sh 'bower install'
+		sh 'grunt serve'
+		sh 'grunt --help'
+		sh 'bower --help'
       }
     }
     stage('Test') {
