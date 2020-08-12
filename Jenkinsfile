@@ -13,6 +13,8 @@ spec:
 
   node(POD_LABEL) {
     stage('Build nodejs') {
+      sh "echo Workspace dir is ${pwd()}"  
+      checkout scm
       container('nodejs') {
         sh 'npm install'
       }
