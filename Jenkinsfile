@@ -2,7 +2,7 @@ podTemplate(yaml: """
 apiVersion: v1
 kind: Pod
 spec:
-  activeDeadlineSeconds: 300
+  activeDeadlineSeconds: 304
   containers:
   - name: nodejs
     image: node:6-alpine
