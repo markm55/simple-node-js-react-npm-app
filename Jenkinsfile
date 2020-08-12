@@ -19,6 +19,7 @@ spec:
       sh "echo Workspace dir is ${pwd()}"  
       checkout scm
       container('nodejs') {
+        sh 'grunt --help'
         sh 'npm install'
       }
     }
