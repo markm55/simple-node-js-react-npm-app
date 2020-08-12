@@ -8,6 +8,9 @@ spec:
     image: node:6-alpine
     command: ['cat']
     tty: true
+    env:
+    - name: CI
+      value: true
 """
   ) {
 
@@ -17,6 +20,11 @@ spec:
       checkout scm
       container('nodejs') {
         sh 'npm install'
+      }
+    }
+    stage('Test') {
+      container('nodejs') {
+        sh './jenkins/scripts/test.sh'
       }
     }
   }
