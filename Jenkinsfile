@@ -2,12 +2,12 @@ podTemplate(yaml: """
 apiVersion: v1
 kind: Pod
 spec:
+  activeDeadlineSeconds: 300
   containers:
   - name: nodejs
     image: node:6-alpine
     command: ['cat']
     tty: true
-    activeDeadlineSeconds: 300
 """
   ) {
 
