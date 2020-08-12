@@ -21,7 +21,7 @@ spec:
       container('nodejs') {
         sh 'npm install -g grunt-cli bower'
         sh 'npm install'
-        sh 'bower install'
+        sh 'bower install --allow-root'
 		sh 'grunt serve'
 		sh 'grunt --help'
 		sh 'bower --help'
