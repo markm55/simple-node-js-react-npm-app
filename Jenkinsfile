@@ -7,7 +7,7 @@ spec:
     image: node:6-alpine
     command: ['cat']
     tty: true
-	activeDeadlineSeconds: 300
+    activeDeadlineSeconds: 300
 """
   ) {
 
