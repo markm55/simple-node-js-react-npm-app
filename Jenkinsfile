@@ -21,7 +21,10 @@ spec:
       container('nodejs') {
         sh 'npm install -g grunt-cli bower'
         sh 'npm install'
-        sh 'bower install --allow-root'
+		  withCredentials([usernamePassword(credentialsId: 'gitHub_eBreviaToken', passwordVariable: 'pass', usernameVariable: 'user')]) {
+			sh 'bower login -t $pass'
+			sh 'bower install --allow-root'
+		  }
 //		sh 'grunt serve'
 //		sh 'grunt --help'
 //		sh 'bower --help'
