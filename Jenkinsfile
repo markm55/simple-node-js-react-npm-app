@@ -22,7 +22,7 @@ spec:
         sh 'npm install -g grunt-cli bower'
         sh 'npm install'
 		  withCredentials([usernamePassword(credentialsId: 'gitHub_eBreviaToken', passwordVariable: 'pass', usernameVariable: 'user')]) {
-			sh 'bower login -t $pass'
+			sh 'bower login -t $pass --allow-root'
 			sh 'bower install --allow-root'
 		  }
 //		sh 'grunt serve'
