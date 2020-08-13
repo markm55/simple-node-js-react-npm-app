@@ -22,12 +22,12 @@ spec:
         sh 'npm install -g grunt-cli bower'
         sh 'npm install'
         sh 'bower install --allow-root'
-		sh 'grunt serve'
-		sh 'grunt --help'
-		sh 'bower --help'
+//		sh 'grunt serve'
+//		sh 'grunt --help'
+//		sh 'bower --help'
       }
     }
-    stage('Test') {
+/*    stage('Test') {
       container('nodejs') {
         sh './jenkins/scripts/test.sh'
       }
@@ -38,6 +38,6 @@ spec:
         input message: 'Finished using the web site? (Click "Proceed" to continue)'
         sh './jenkins/scripts/kill.sh'
       }
-    }
+    } */
   }
 }
